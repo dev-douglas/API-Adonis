@@ -26,9 +26,9 @@ Route.group( () => {
 }).prefix('/auth')
 
 Route.resource('/posts', 'PostsController').apiOnly().middleware({
-  store: ['auth'], // array pois você pode definir várias middleware para a rota
-  update: ['auth'],
-  destroy: ['auth'],
+  store: ['auth', 'acl:admin'], // array pois você pode definir várias middleware para a rota
+  update: ['auth', 'acl:admin'],
+  destroy: ['auth', 'acl:admin,normal'],
 })
 
 // Route.group( () => {
