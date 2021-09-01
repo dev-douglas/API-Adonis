@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres
+    container_name: db_cataline
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 'cataline'
+      POSTGRES_DB: 'adonis'
+      POSTGRES_USER: root
+    ports:
+      - 5432:5432
