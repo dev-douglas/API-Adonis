@@ -40,5 +40,7 @@ export class StoreValidator {
 	 * }
 	 *
 	 */
-  public messages = {}
+  public messages = {
+		'title.unique': 'O título precisa ser unico'
+	}
 }
